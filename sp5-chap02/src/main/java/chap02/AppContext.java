@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Created by Sang Jun Park on 6/15/2023.
- * Github : http://github.com/SangJun-GitHub
+ * GitHub : http://github.com/SangJun-GitHub
  */
 @Configuration
 public class AppContext {

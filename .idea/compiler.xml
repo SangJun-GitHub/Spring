@@ -6,11 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="sp5-chap03" />
         <module name="sp5-chap02" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cp5-chap02" target="1.8" />
+      <module name="sp5-chap02 (1)" target="1.8" />
+      <module name="sp5-chap02 (2)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

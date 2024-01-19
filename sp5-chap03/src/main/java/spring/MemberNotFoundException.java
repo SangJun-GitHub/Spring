@@ -5,5 +5,5 @@ package spring;
  * GitHub : http://github.com/SangJun-GitHub
  */
 
-public class MemberNotFoundException {
+public class MemberNotFoundException extends RuntimeException{
 }

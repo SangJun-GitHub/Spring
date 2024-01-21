@@ -8,6 +8,7 @@ import spring.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.LocalDateTime;
 
 /**
  * Created by Sang Jun Park on 01/20/2024.
@@ -20,6 +21,12 @@ public class mainForSpring {
     public static void main(String[] args) throws IOException {
         ctx = new AnnotationConfigApplicationContext(AppCtx.class);
 
+        MemberDao memberDao = ctx.getBean("memberDao", MemberDao.class);
+        Member member1 = new Member("aaa@gmail.com", "aaa", "aaa", LocalDateTime.now());
+        Member member2 = new Member("bbb@gmail.com", "bbb", "bbb", LocalDateTime.now());
+        memberDao.insert(member1);
+        memberDao.insert(member2);
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         printHelp();
@@ -30,13 +37,20 @@ public class mainForSpring {
             if(command.equals("exit")){
                 System.out.println("Exit program.");
                 break;
-            }
-
-            if(command.startsWith("new")){
+            } else if(command.startsWith("new")){
                 processNewCommand(command.split(" "));
                 continue;
             } else if(command.startsWith("change ")){
                 processChangeCommand(command.split(" "));
+                continue;
+            } else if(command.equals("list")){
+                processListCommand();
+                continue;
+            } else if(command.startsWith("info ")){
+                processInfoCommand(command.split(" "));
+                continue;
+            } else if(command.equals("version")){
+                processVersionCommand();
                 continue;
             }
             printHelp();
@@ -92,5 +106,24 @@ public class mainForSpring {
         System.out.println("Register        : new email name password confirmPassword");
         System.out.println("Change Password : change email currentPassword newPassword");
         System.out.println();
+    }
+
+    private static void processListCommand(){
+        MemberListPrinter listPrinter = ctx.getBean("listPrinter", MemberListPrinter.class);
+        listPrinter.printAll();
+    }
+
+    private static void processInfoCommand(String[] args){
+        if(args.length != 2){
+            printHelp();
+            return;
+        }
+        MemberInfoPrinter infoPrinter = ctx.getBean("infoPrinter", MemberInfoPrinter.class);
+        infoPrinter.printMemberInfo(args[1]);
+    }
+
+    private static void processVersionCommand(){
+        VersionPrinter versionPrinter = ctx.getBean("versionPrinter", VersionPrinter.class);
+        versionPrinter.print();
     }
 }

@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
  * GitHub : http://github.com/SangJun-GitHub
  */
 
-public class mainForSpring {
+public class MainForSpring {
     private static ApplicationContext ctx = null;
 
     public static void main(String[] args) throws IOException {
@@ -25,7 +25,7 @@ public class mainForSpring {
         Member member1 = new Member("aaa@gmail.com", "aaa", "aaa", LocalDateTime.now());
         Member member2 = new Member("bbb@gmail.com", "bbb", "bbb", LocalDateTime.now());
         memberDao.insert(member1);
-        memberDao.insert(member2);
+        memberDao.insert(member2 );
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 

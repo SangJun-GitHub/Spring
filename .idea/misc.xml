@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/sp5-chap03" />
     <file type="web" url="file://$PROJECT_DIR$/sp5-chap04" />
+    <file type="web" url="file://$PROJECT_DIR$/sp5-chap05" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -12,6 +13,7 @@
         <option value="$PROJECT_DIR$/sp5-chap02/pom.xml" />
         <option value="$PROJECT_DIR$/sp5-chap03/pom.xml" />
         <option value="$PROJECT_DIR$/sp5-chap04/pom.xml" />
+        <option value="$PROJECT_DIR$/sp5-chap05/porm.xml" />
       </list>
     </option>
   </component>

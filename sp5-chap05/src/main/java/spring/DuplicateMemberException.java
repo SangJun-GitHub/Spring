@@ -5,5 +5,8 @@ package spring;
  * GitHub : http://github.com/SangJun-GitHub
  */
 
-public class DuplicateMemberException {
+public class DuplicateMemberException extends RuntimeException{
+    public DuplicateMemberException(String message){
+        super(message);
+    }
 }

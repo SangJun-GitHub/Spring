@@ -5,5 +5,10 @@ package spring;
  * GitHub : http://github.com/SangJun-GitHub
  */
 
-public class MemberSummaryPrinter {
+public class MemberSummaryPrinter extends MemberPrinter{
+    @Override
+    public void print(Member member){
+        System.out.printf("Member Info : Email = %s, Name = %s\n",
+                member.getEmail(), member.getName());
+    }
 }

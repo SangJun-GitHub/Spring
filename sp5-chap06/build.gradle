@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.apress.isf.spring'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework:spring-context:5.0.2.RELEASE'
+    compile 'org.aspectj:aspectjweaver:1.8.13'
+    testImplementation 'junit:junit:4.13.2'
+}

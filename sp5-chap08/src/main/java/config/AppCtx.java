@@ -35,15 +35,15 @@ public class AppCtx {
     }
 
     @Bean
-    public MemberDao memberDao(){
-        return new MemberDao(dataSource());
-    }
-
-    @Bean
     public PlatformTransactionManager transactionManager(){
         DataSourceTransactionManager tm = new DataSourceTransactionManager();
         tm.setDataSource(dataSource());
         return tm;
+    }
+
+    @Bean
+    public MemberDao memberDao(){
+        return new MemberDao(dataSource());
     }
 
     @Bean

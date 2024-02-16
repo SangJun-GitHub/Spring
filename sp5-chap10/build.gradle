@@ -1,14 +1,22 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
 
-group = 'com.apress.isf.spring'
-version = '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = "UTF-8"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.13.2'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    providedRuntime 'javax.servlet.jsp:javax.servlet.jsp-api:2.3.2-b02'
+    compile 'javax.servlet:jstl:1.2'
+    compile 'org.springframework:spring-webmvc:5.0.2.RELEASE'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'
 }

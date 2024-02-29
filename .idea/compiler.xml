@@ -10,7 +10,6 @@
         <module name="sp5-chap04" />
         <module name="sp5-chap05" />
         <module name="sp5-chap06" />
-        <module name="sp5-chap10" />
         <module name="sp5-chap02" />
         <module name="sp5-chap07" />
         <module name="sp5-chap08" />
@@ -21,6 +20,7 @@
       <module name="cp5-chap02" target="1.8" />
       <module name="sp5-chap02 (1)" target="1.8" />
       <module name="sp5-chap02 (2)" target="1.8" />
+      <module name="sp5-chap10_1" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
